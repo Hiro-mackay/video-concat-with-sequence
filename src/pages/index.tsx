@@ -1,26 +1,39 @@
-import { useRef } from 'react';
 
-export default function Home() {
-  const ref = useRef<HTMLDivElement>();
-  const isClient = typeof window !== 'undefined';
-
-  
+const Page = ( )=> {
 
   return (
-    <div className="w-full min-h-screen bg-gray-700">
-      <div className="grid grid-cols-2">
-        <div
-          className="p-24 box-border"
-          style={{
-            height: 1000
-          }}
-        >
-          <div className="h-full bg-gray-100"></div>
-        </div>
-        <div className="bg-gray-900 w-full h-full"></div>
-      </div>
+    <div>
+    <main>
+      <h1>
+        Welcome to <a href="https://nextjs.org">Next.js!</a>
+      </h1>
+      <p>
+        Get started by editing <code>pages/index.js</code>
+      </p>
+      <div>
+        <a href="https://nextjs.org/docs">
+          <h3>Documentation &rarr;</h3>
+          <p>Find in-depth information about Next.js features and API.</p>
+        </a>
 
-      <div className="h-96 bg-gray-800" ref={ref}></div>
-    </div>
+        <a href="https://nextjs.org/learn">
+          <h3>Learn &rarr;</h3>
+          <p>Learn about Next.js in an interactive course with quizzes!</p>
+        </a>
+
+        <a href="https://github.com/vercel/next.js/tree/master/examples">
+          <h3>Examples &rarr;</h3>
+          <p>Discover and deploy boilerplate example Next.js projects.</p>
+        </a>
+
+        <a href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app">
+          <h3>Deploy &rarr;</h3>
+          <p>Instantly deploy your Next.js site to a public URL with Vercel.</p>
+        </a>
+      </div>
+    </main>
+  </div>
   );
 }
+
+export default Page
